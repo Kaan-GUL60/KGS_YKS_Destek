@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
         Handler().postDelayed({
-            val intent = Intent(this, MainHomeActivity::class.java)
+            val intent = Intent(this, GuideActivity::class.java)
             startActivity(intent)
         }, SPLASH_DELAY)
     }
