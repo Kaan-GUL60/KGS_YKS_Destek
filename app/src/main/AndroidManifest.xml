@@ -11,16 +11,16 @@
             android:theme="@style/Theme.KGSYKSDestek">
         <activity
                 android:name=".MainHomeActivity"
+                android:theme="@style/Theme.KGSYKSDestek"
                 android:exported="true"/>
-        <activity
-                android:name=".SilActivity"
-                android:exported="true"
-                android:label="@string/title_activity_sil"/>
+
         <activity
                 android:name=".GuideActivity"
+                android:theme="@style/Theme.KGSYKSDestek"
                 android:exported="true"/>
         <activity
                 android:name=".MainActivity"
+                android:theme="@style/Theme.KGSYKSDestek"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
