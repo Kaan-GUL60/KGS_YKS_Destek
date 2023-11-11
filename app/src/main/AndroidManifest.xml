@@ -12,10 +12,7 @@
         <activity
                 android:name=".MainHomeActivity"
                 android:exported="true"/>
-        <activity
-                android:name=".SilActivity"
-                android:exported="true"
-                android:label="@string/title_activity_sil"/>
+
         <activity
                 android:name=".GuideActivity"
                 android:exported="true"/>
