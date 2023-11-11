@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/guide_home_navigation"
+            app:startDestination="@id/guideFragment1">
+
+    <fragment android:id="@+id/guideFragment1" android:name="com.gkaan.kgsyksdestek.guide.GuideFragment1"
+              android:label="fragment_guide1" tools:layout="@layout/fragment_guide1">
+        <action android:id="@+id/action_guideFragment1_to_guideFragment2" app:destination="@id/guideFragment2"/>
+    </fragment>
+    <fragment android:id="@+id/guideFragment2" android:name="com.gkaan.kgsyksdestek.guide.GuideFragment2"
+              android:label="fragment_guide2" tools:layout="@layout/fragment_guide2">
+        <action android:id="@+id/action_guideFragment2_to_guideFragment3" app:destination="@id/guideFragment3"/>
+    </fragment>
+    <fragment android:id="@+id/guideFragment3" android:name="com.gkaan.kgsyksdestek.guide.GuideFragment3"
+              android:label="fragment_guide3" tools:layout="@layout/fragment_guide3">
+        <action android:id="@+id/action_guideFragment3_to_mainHomeActivity" app:destination="@id/mainHomeActivity"/>
+    </fragment>
+    <activity android:id="@+id/mainHomeActivity" android:name="com.gkaan.kgsyksdestek.MainHomeActivity"
+              android:label="activity_main_home" tools:layout="@layout/activity_main_home"/>
+</navigation>

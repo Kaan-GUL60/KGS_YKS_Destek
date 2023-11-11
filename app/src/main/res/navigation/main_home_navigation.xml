@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main_home_navigation"
+            app:startDestination="@id/mainFragment">
+
+    <fragment android:id="@+id/addQuestionFragment" android:name="com.gkaan.kgsyksdestek.home.AddQuestionFragment"
+              android:label="fragment_add_question" tools:layout="@layout/fragment_add_question"/>
+    <fragment android:id="@+id/chartFragment" android:name="com.gkaan.kgsyksdestek.home.ChartFragment"
+              android:label="fragment_chart" tools:layout="@layout/fragment_chart"/>
+    <fragment android:id="@+id/favouriteFragment" android:name="com.gkaan.kgsyksdestek.home.FavouriteFragment"
+              android:label="fragment_favourite" tools:layout="@layout/fragment_favourite"/>
+    <fragment android:id="@+id/mainFragment" android:name="com.gkaan.kgsyksdestek.home.MainFragment"
+              android:label="fragment_main" tools:layout="@layout/fragment_main"/>
+    <fragment android:id="@+id/profilFragment" android:name="com.gkaan.kgsyksdestek.home.ProfilFragment"
+              android:label="fragment_profil" tools:layout="@layout/fragment_profil"/>
+</navigation>
