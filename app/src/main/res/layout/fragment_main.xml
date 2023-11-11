@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout
+
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/blue"
         tools:context=".home.MainFragment">
-
     <LinearLayout
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_margin="25dp"
+
+
             android:layout_width="match_parent"
-            android:layout_height="0dp" tools:ignore="MissingConstraints" android:id="@+id/linearLayout"
-            tools:layout_editor_absoluteX="25dp">
+            android:layout_height="wrap_content" android:id="@+id/linearLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="25dp" android:layout_marginEnd="25dp"
+    >
         <LinearLayout
                 android:orientation="vertical"
-                android:layout_margin="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="4"
                 android:layout_width="wrap_content"
+
                 android:layout_height="wrap_content">
             <TextView
                     android:text="@string/welcome"
@@ -34,7 +42,7 @@
                     android:text="@string/user_name"
                     android:textSize="18sp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginBottom="5dp"
+
                     android:layout_marginLeft="5dp"
                     android:fontFamily="@font/poppins_light"
                     android:textColor="@color/gray"
@@ -48,466 +56,435 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/imageView3" android:layout_weight="1"/>
     </LinearLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_margin="35dp"
+
+
+    <LinearLayout
+
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:padding="12dp"
             android:orientation="vertical"
             style="@style/gray_layout"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="400dp"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout" android:id="@+id/constraintLayout">
-        <com.db.williamchart.view.DonutChartView
-                android:layout_width="181dp"
+            android:id="@+id/constraintLayout"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/button2" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toTopOf="@id/linearLayout" android:layout_marginTop="40dp">
+
+
+        <app.futured.donut.DonutProgressView
+                android:id="@+id/donut_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                app:chart_labelsFont="@font/poppins_bold"
-                app:chart_labelsSize="15sp"
-                android:layout_height="180dp"
+                app:donut_bgLineColor="@color/blue"
+                app:donut_gapWidth="-1"
+                android:layout_marginBottom="15dp"
+                app:donut_strokeCap="butt"
+                app:donut_gapAngle="0"
+                android:layout_gravity="center"
+                app:donut_strokeWidth="25dp"/>
 
-                app:chart_donutBackgroundColor="@color/purple_200"
+        <LinearLayout
+                android:baselineAligned="false"
 
-                app:chart_donutThickness="16dp"
-                app:chart_donutTotal="200"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" android:id="@+id/donutChartView">
+
+                android:orientation="horizontal"
+                style="@style/gray_layout"
+                android:id="@+id/derslistesi"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
             <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                <TextView
-                        android:text="@string/soru_sayisi"
-                        android:fontFamily="@font/poppins_medium"
-                        android:textSize="20sp"
-                        android:textColor="@color/blue"
-                        android:layout_gravity="center"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView6"/>
-                <TextView
-                        android:text="@string/soru_number"
-                        android:fontFamily="@font/poppins_medium"
-                        android:textSize="25sp"
-                        android:textColor="@color/blue"
-                        android:layout_gravity="center"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView7"/>
-            </LinearLayout>
-        </com.db.williamchart.view.DonutChartView>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="125dp"
-
-                android:layout_margin="5dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/donutChartView" android:id="@+id/linearLayout2"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
-                app:layout_constraintStart_toEndOf="@+id/linearLayout3">
-            <FrameLayout
-                    style="@style/gray_layout"
-                    android:background="@color/color_turkce"
-                    android:layout_width="25dp"
-
-                    android:layout_gravity="center"
-                    android:layout_height="25dp" android:id="@+id/imageView4"
-            >
-            </FrameLayout>
-            <TextView
-                    android:text="@string/turkce"
-                    android:textSize="16sp"
-                    android:layout_marginStart="5dp"
-                    android:textColor="@color/blue"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_medium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView8" android:layout_weight="1"/>
-            <ImageView
-                    android:src="@drawable/ic_arrow_back"
-                    android:rotation="180"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/imageView5"
-                    android:layout_weight="1"/>
-        </LinearLayout>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-
-                android:layout_margin="5dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/donutChartView"
-                android:id="@+id/linearLayout3"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
-                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
-        >
-            <FrameLayout
-                    style="@style/gray_layout"
-                    android:background="@color/color_mat"
-                    android:layout_width="25dp"
-
-                    android:layout_gravity="center"
-                    android:layout_height="25dp"
-                    android:id="@+id/imageView10"
-            >
-            </FrameLayout>
-            <TextView
-                    android:text="@string/mat"
-                    android:textSize="16sp"
-                    android:textColor="@color/blue"
-                    android:layout_marginStart="5dp"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_medium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView9" android:layout_weight="1"/>
-            <ImageView
-                    android:src="@drawable/ic_arrow_back"
-                    android:rotation="180"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView6"
-                    android:layout_weight="1"/>
-        </LinearLayout>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-
-                android:layout_margin="5dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/linearLayout4"
-                android:layout_weight="1"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
-                app:layout_constraintStart_toStartOf="@+id/linearLayout3"
-                app:layout_constraintEnd_toEndOf="@+id/linearLayout3">
-            <FrameLayout
-                    style="@style/gray_layout"
-                    android:background="@color/color_geo"
-                    android:layout_width="25dp"
-
-                    android:layout_gravity="center"
-                    android:layout_height="25dp"
-                    android:id="@+id/imageView11"
-            >
-            </FrameLayout>
-            <TextView
-                    android:text="@string/geo"
-                    android:textSize="16sp"
-                    android:layout_marginStart="5dp"
-                    android:textColor="@color/blue"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_medium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView10" android:layout_weight="1"/>
-            <ImageView
-                    android:src="@drawable/ic_arrow_back"
-                    android:rotation="180"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView8"
-                    android:layout_weight="1"/>
-        </LinearLayout>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-
-                android:layout_margin="5dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/linearLayout5"
-                android:layout_weight="1"
-                app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
-                app:layout_constraintStart_toStartOf="@+id/linearLayout2">
-            <FrameLayout
-                    style="@style/gray_layout"
-                    android:background="@color/color_biyo"
-                    android:layout_width="25dp"
-
-                    android:layout_gravity="center"
-                    android:layout_height="25dp"
-                    android:id="@+id/imageView12"
-            >
-            </FrameLayout>
-            <TextView
-                    android:text="@string/biyo"
-                    android:textSize="16sp"
-                    android:layout_marginStart="5dp"
-                    android:textColor="@color/blue"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_medium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView11" android:layout_weight="1"/>
-            <ImageView
-                    android:src="@drawable/ic_arrow_back"
-                    android:rotation="180"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView9"
-                    android:layout_weight="1"/>
-        </LinearLayout>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-
-                android:layout_margin="5dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/linearLayout6"
-                android:layout_weight="1"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
-                app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
-                app:layout_constraintStart_toStartOf="@+id/linearLayout3">
-            <FrameLayout
-                    style="@style/gray_layout"
-                    android:background="@color/color_ck"
-                    android:layout_width="25dp"
-
-                    android:layout_gravity="center"
-                    android:layout_height="25dp"
-                    android:id="@+id/imageView15"
-            >
-            </FrameLayout>
-            <TextView
-                    android:text="@string/ck"
-                    android:textSize="16sp"
-                    android:layout_marginStart="5dp"
-                    android:textColor="@color/blue"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_medium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView12" android:layout_weight="1"/>
-            <ImageView
-                    android:src="@drawable/ic_arrow_back"
-                    android:rotation="180"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView13"
-                    android:layout_weight="1"/>
-        </LinearLayout>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-
-                android:layout_margin="5dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/linearLayout7"
-                android:layout_weight="1"
-                app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
-                app:layout_constraintStart_toStartOf="@+id/linearLayout5">
-            <FrameLayout
-                    style="@style/gray_layout"
-                    android:background="@color/color_kimya"
-                    android:layout_width="25dp"
-
-                    android:layout_gravity="center"
-                    android:layout_height="25dp"
-                    android:id="@+id/imageView16"
-            >
-            </FrameLayout>
-            <TextView
-                    android:text="@string/kimya"
-                    android:textSize="16sp"
-                    android:textColor="@color/blue"
-                    android:layout_marginStart="5dp"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_medium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView13" android:layout_weight="1"/>
-            <ImageView
-                    android:src="@drawable/ic_arrow_back"
-                    android:rotation="180"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView14"
-                    android:layout_weight="1"/>
-        </LinearLayout>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="0dp"
-
-                android:layout_margin="5dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/linearLayout8"
-                app:layout_constraintStart_toStartOf="@+id/linearLayout6"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
-                app:layout_constraintEnd_toEndOf="@+id/linearLayout6">
-            <FrameLayout
-                    style="@style/gray_layout"
-                    android:background="@color/color_tarih"
-                    android:layout_width="25dp"
-
-                    android:layout_gravity="center"
-                    android:layout_height="25dp"
-                    android:id="@+id/imageView17"
-            >
-            </FrameLayout>
-            <TextView
-                    android:text="@string/tarih"
-                    android:textSize="16sp"
+                    android:id="@+id/sol"
                     android:layout_weight="1"
-                    android:textColor="@color/blue"
-                    android:layout_marginStart="5dp"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_medium"
+                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView14"/>
-            <ImageView
-                    android:src="@drawable/ic_arrow_back"
-                    android:rotation="180"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView18"
-            />
-        </LinearLayout>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                <LinearLayout
+                        android:id="@+id/turkce"
+                        android:orientation="horizontal"
+                        android:layout_width="125dp"
+                        android:layout_margin="5dp"
+                        android:layout_height="wrap_content">
 
-                android:layout_margin="5dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/linearLayout9"
-                android:layout_weight="1"
-                app:layout_constraintEnd_toEndOf="@+id/linearLayout7"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout11"
-                app:layout_constraintStart_toStartOf="@+id/linearLayout7">
-            <FrameLayout
-                    style="@style/gray_layout"
-                    android:background="@color/color_fizik"
-                    android:layout_width="25dp"
+                    <FrameLayout
+                            style="@style/gray_layout"
+                            android:background="@color/color_turkce"
+                            android:layout_width="25dp"
+                            android:layout_gravity="center"
+                            android:layout_height="25dp" android:id="@+id/imageView4">
+                    </FrameLayout>
+                    <TextView
+                            android:text="@string/turkce"
+                            android:textSize="16sp"
+                            android:layout_marginStart="5dp"
+                            android:textColor="@color/blue"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppins_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView8" android:layout_weight="0"/>
+                    <ImageView
+                            android:src="@drawable/ic_arrow_back"
+                            android:rotation="180"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/imageView5"
+                    />
+                </LinearLayout>  <!-- Türkçe -->
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
 
-                    android:layout_gravity="center"
-                    android:layout_height="25dp"
-                    android:id="@+id/imageView19"
-            >
-            </FrameLayout>
-            <TextView
-                    android:text="@string/fizik"
-                    android:textSize="16sp"
-                    android:textColor="@color/blue"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="5dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView16" android:layout_weight="1"/>
-            <ImageView
-                    android:src="@drawable/ic_arrow_back"
-                    android:rotation="180"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView20"
-                    android:layout_weight="1"/>
-        </LinearLayout>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_height="wrap_content"
 
-                android:layout_margin="5dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/linearLayout10"
-                android:layout_weight="1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/linearLayout8"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
-                app:layout_constraintEnd_toEndOf="@+id/linearLayout8">
-            <FrameLayout
-                    style="@style/gray_layout"
-                    android:background="@color/color_felsefe"
-                    android:layout_width="25dp"
+                        android:id="@+id/matematik"
 
-                    android:layout_gravity="center"
-                    android:layout_height="25dp"
-                    android:id="@+id/imageView21"
-            >
-            </FrameLayout>
-            <TextView
-                    android:text="@string/felsefe"
-                    android:textSize="16sp"
-                    android:textColor="@color/blue"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="5dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView17" android:layout_weight="1"/>
-            <ImageView
-                    android:src="@drawable/ic_arrow_back"
-                    android:rotation="180"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView22"
-                    android:layout_weight="1"/>
-        </LinearLayout>
-        <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
+                >
+                    <FrameLayout
+                            style="@style/gray_layout"
+                            android:background="@color/color_mat"
+                            android:layout_width="25dp"
 
-                android:layout_margin="5dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/linearLayout11"
-                android:layout_weight="1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/linearLayout9"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
-                app:layout_constraintStart_toStartOf="@+id/linearLayout9">
-            <FrameLayout
-                    style="@style/gray_layout"
-                    android:background="@color/color_din"
-                    android:layout_width="25dp"
+                            android:layout_gravity="center"
+                            android:layout_height="25dp"
+                            android:id="@+id/imageView10"
+                    >
+                    </FrameLayout>
+                    <TextView
+                            android:text="@string/mat"
+                            android:textSize="16sp"
+                            android:textColor="@color/blue"
+                            android:layout_marginStart="5dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppins_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView9" android:layout_weight="1"/>
+                    <ImageView
+                            android:src="@drawable/ic_arrow_back"
+                            android:rotation="180"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView6"
+                    />
+                </LinearLayout>  <!-- Matematik -->
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
 
-                    android:layout_gravity="center"
-                    android:layout_height="25dp"
-                    android:id="@+id/imageView23"
-            >
-            </FrameLayout>
-            <TextView
-                    android:text="@string/din"
-                    android:textSize="16sp"
-                    android:layout_marginStart="5dp"
-                    android:textColor="@color/blue"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_medium"
+                        android:layout_margin="5dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/geometri">
+
+
+                    <FrameLayout
+                            style="@style/gray_layout"
+                            android:background="@color/color_geo"
+                            android:layout_width="25dp"
+
+                            android:layout_gravity="center"
+                            android:layout_height="25dp"
+                            android:id="@+id/imageView11"
+                    >
+                    </FrameLayout>
+                    <TextView
+                            android:text="@string/geo"
+                            android:textSize="16sp"
+                            android:layout_marginStart="5dp"
+                            android:textColor="@color/blue"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppins_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView10" android:layout_weight="0"/>
+                    <ImageView
+                            android:src="@drawable/ic_arrow_back"
+                            android:rotation="180"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView8"
+                            android:layout_weight="1"/>
+                </LinearLayout>  <!-- Geometri -->
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+
+                        android:layout_margin="5dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/biyoloji">
+                    <FrameLayout
+                            style="@style/gray_layout"
+                            android:background="@color/color_biyo"
+                            android:layout_width="25dp"
+
+                            android:layout_gravity="center"
+                            android:layout_height="25dp"
+                            android:id="@+id/imageView12"
+                    >
+                    </FrameLayout>
+                    <TextView
+                            android:text="@string/biyo"
+                            android:textSize="16sp"
+                            android:layout_marginStart="5dp"
+                            android:textColor="@color/blue"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppins_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView11" android:layout_weight="0"/>
+                    <ImageView
+                            android:src="@drawable/ic_arrow_back"
+                            android:rotation="180"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView9"
+                            android:layout_weight="1"/>
+                </LinearLayout>  <!-- Biyoloji -->
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+
+                        android:layout_margin="5dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cografya">
+                    <FrameLayout
+                            style="@style/gray_layout"
+                            android:background="@color/color_ck"
+                            android:layout_width="25dp"
+
+                            android:layout_gravity="center"
+                            android:layout_height="25dp"
+                            android:id="@+id/imageView15"
+                    >
+                    </FrameLayout>
+                    <TextView
+                            android:text="@string/ck"
+                            android:textSize="16sp"
+                            android:layout_marginStart="5dp"
+                            android:textColor="@color/blue"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppins_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView12" android:layout_weight="0"/>
+                    <ImageView
+                            android:src="@drawable/ic_arrow_back"
+                            android:rotation="180"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView13"
+                            android:layout_weight="1"/>
+                </LinearLayout>  <!-- Coğrafya -->
+            </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/sag"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView18" android:layout_weight="1"/>
-            <ImageView
-                    android:src="@drawable/ic_arrow_back"
-                    android:rotation="180"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageView25"
-                    android:layout_weight="1"/>
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:layout_height="match_parent">
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+
+                        android:layout_margin="5dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/kimya"
+
+                >
+                    <FrameLayout
+                            style="@style/gray_layout"
+                            android:background="@color/color_kimya"
+                            android:layout_width="25dp"
+
+                            android:layout_gravity="center"
+                            android:layout_height="25dp"
+                            android:id="@+id/imageView16"
+                    >
+                    </FrameLayout>
+                    <TextView
+                            android:text="@string/kimya"
+                            android:textSize="16sp"
+                            android:textColor="@color/blue"
+                            android:layout_marginStart="5dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppins_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView13" android:layout_weight="1"/>
+                    <ImageView
+                            android:src="@drawable/ic_arrow_back"
+                            android:rotation="180"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView14"
+                            android:layout_weight="1"/>
+                </LinearLayout>  <!-- Kimya -->
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tarih">
+                    <FrameLayout
+                            style="@style/gray_layout"
+                            android:background="@color/color_tarih"
+                            android:layout_width="25dp"
+                            android:layout_gravity="center"
+                            android:layout_height="25dp"
+                            android:id="@+id/imageView17">
+                    </FrameLayout>
+                    <TextView
+                            android:text="@string/tarih"
+                            android:textSize="16sp"
+                            android:layout_weight="0"
+                            android:textColor="@color/blue"
+                            android:layout_marginStart="5dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppins_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView14"/>
+                    <ImageView
+                            android:src="@drawable/ic_arrow_back"
+                            android:rotation="180"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView18"
+                    />
+                </LinearLayout>  <!-- Tarih -->
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+
+                        android:layout_margin="5dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/fizik">
+                    <FrameLayout
+                            style="@style/gray_layout"
+                            android:background="@color/color_fizik"
+                            android:layout_width="25dp"
+
+                            android:layout_gravity="center"
+                            android:layout_height="25dp"
+                            android:id="@+id/imageView19"
+                    >
+                    </FrameLayout>
+                    <TextView
+                            android:text="@string/fizik"
+                            android:textSize="16sp"
+                            android:textColor="@color/blue"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView16" android:layout_weight="0"/>
+                    <ImageView
+                            android:src="@drawable/ic_arrow_back"
+                            android:rotation="180"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView20"
+                            android:layout_weight="1"/>
+                </LinearLayout>  <!-- Fizik -->
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+
+                        android:layout_margin="5dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/felsefe">
+                    <FrameLayout
+                            style="@style/gray_layout"
+                            android:background="@color/color_felsefe"
+                            android:layout_width="25dp"
+
+                            android:layout_gravity="center"
+                            android:layout_height="25dp"
+                            android:id="@+id/imageView21"
+                    >
+                    </FrameLayout>
+                    <TextView
+                            android:text="@string/felsefe"
+                            android:textSize="16sp"
+                            android:textColor="@color/blue"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView17" android:layout_weight="0"/>
+                    <ImageView
+                            android:src="@drawable/ic_arrow_back"
+                            android:rotation="180"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView22"
+                            android:layout_weight="1"/>
+                </LinearLayout>  <!-- Felsefe -->
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+
+                        android:layout_margin="5dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/din">
+                    <FrameLayout
+                            style="@style/gray_layout"
+                            android:background="@color/color_din"
+                            android:layout_width="25dp"
+
+                            android:layout_gravity="center"
+                            android:layout_height="25dp"
+                            android:id="@+id/imageView23"
+                    >
+                    </FrameLayout>
+                    <TextView
+                            android:text="@string/din"
+                            android:textSize="16sp"
+                            android:layout_marginStart="5dp"
+                            android:textColor="@color/blue"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppins_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView18" android:layout_weight="0"/>
+                    <ImageView
+                            android:src="@drawable/ic_arrow_back"
+                            android:rotation="180"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imageView25"
+                            android:layout_weight="1"/>
+                </LinearLayout>  <!-- Din -->
+            </LinearLayout>
+        </LinearLayout> <!-- Ders Listesi -->
+
+
+    </LinearLayout>
     <Button
+
+
             android:text="@string/btn1"
             android:layout_width="227dp"
             android:layout_height="49dp" android:id="@+id/button2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" app:layout_constraintVertical_bias="0.225"/>
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" app:layout_constraintVertical_bias="0.225"
+            app:icon="@drawable/ic_refresh" style="@style/Widget.AppCompat.Button"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
