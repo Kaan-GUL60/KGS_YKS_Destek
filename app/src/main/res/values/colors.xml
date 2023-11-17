@@ -24,4 +24,7 @@
     <color name="color_din">#DAB600</color>
 
 
+    <color name="dark_gray">#B7B7B8</color>
+    <color name="green">#00BF63</color>
+    <color name="red">#FF1723</color>
 </resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+         xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_margin="15dp"
+        android:gravity="start"
+        android:id="@+id/konu_item"
+        android:background="@drawable/rounded_corners"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <TextView
+            android:text="Çarpanlara Ayırma"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/blue"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/konu_adi"
+           />
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:background="@drawable/round_question_number_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+                android:text="60"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/soru_sayisi_red"
+        />
+    </LinearLayout>  <!-- Red soru sayısı-->
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_margin="3dp" android:gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/round_question_number_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+                android:text="36"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/soru_sayisi_gray"
+        />
+    </LinearLayout>  <!-- Gray soru sayısı-->
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_margin="3dp" android:gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/round_question_number_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+                android:text="18"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/white"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/soru_sayisi_green"
+        />
+    </LinearLayout>  <!-- Green soru sayısı-->
+</LinearLayout>

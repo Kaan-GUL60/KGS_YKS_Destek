@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_margin="15dp"
+        android:gravity="start"
+        android:id="@+id/soru_item"
+        android:background="@drawable/rounded_corners"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/soru_item_image"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="5dp"
+            app:shapeAppearanceOverlay="@style/rounded_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+    />
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:layout_weight="10"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+                android:text="Soru Adı"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/blue"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/soru_adi"/>
+        <TextView
+                android:text="Soru Açıklaması"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/blue"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/soru_explain"/>
+    </LinearLayout>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:id="@+id/soru_item_fav"
+            app:srcCompat="@drawable/ic_favorite"
+           />
+    <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_margin="5dp"
+            android:background="@color/color_biyo"
+            app:shapeAppearanceOverlay="@style/rounded_image"
+            android:scaleType="centerCrop"
+            android:id="@+id/soru_item_tag_color"/>
+
+
+</LinearLayout>

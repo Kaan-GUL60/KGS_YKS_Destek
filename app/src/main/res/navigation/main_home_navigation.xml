@@ -4,16 +4,13 @@
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main_home_navigation"
             app:startDestination="@id/mainFragment">
 
-    <fragment android:id="@+id/addQuestionFragment" android:name="com.gkaan.kgsyksdestek.home.AddQuestionFragment"
-              android:label="fragment_add_question" tools:layout="@layout/fragment_add_question"/>
-    <fragment android:id="@+id/chartFragment" android:name="com.gkaan.kgsyksdestek.home.ChartFragment"
-              android:label="fragment_chart" tools:layout="@layout/fragment_chart"/>
-    <fragment android:id="@+id/favouriteFragment" android:name="com.gkaan.kgsyksdestek.home.FavouriteFragment"
-              android:label="fragment_favourite" tools:layout="@layout/fragment_favourite"/>
     <fragment android:id="@+id/mainFragment" android:name="com.gkaan.kgsyksdestek.home.MainFragment"
-              android:label="fragment_main" tools:layout="@layout/fragment_main"/>
-    <fragment android:id="@+id/profilFragment" android:name="com.gkaan.kgsyksdestek.home.ProfilFragment"
-              android:label="fragment_profil" tools:layout="@layout/fragment_profil"/>
+              android:label="fragment_main" tools:layout="@layout/fragment_main">
+        <action android:id="@+id/action_mainFragment_to_questionListFragment"
+                app:destination="@id/questionListFragment"/>
+    </fragment>
     <fragment android:id="@+id/questionListFragment" android:name="com.gkaan.kgsyksdestek.QuestionListFragment"
-              android:label="fragment_question_list" tools:layout="@layout/fragment_question_list"/>
+              android:label="fragment_question_list" tools:layout="@layout/fragment_question_list">
+        <action android:id="@+id/action_questionListFragment_to_mainFragment" app:destination="@id/mainFragment"/>
+    </fragment>
 </navigation>

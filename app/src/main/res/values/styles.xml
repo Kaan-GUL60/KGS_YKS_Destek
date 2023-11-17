@@ -3,5 +3,14 @@
     <style name="gray_layout">
         <item name="android:background">@drawable/rounded_corners</item>
     </style>
+    <style name="round_corner">
+        <item name="android:background">@drawable/round_outline</item>
+    </style>
 
+    <style name="rounded_image">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+        <item name="android:background">@color/gray</item>
+
+    </style>
 </resources>
