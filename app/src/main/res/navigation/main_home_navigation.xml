@@ -14,4 +14,6 @@
               android:label="fragment_main" tools:layout="@layout/fragment_main"/>
     <fragment android:id="@+id/profilFragment" android:name="com.gkaan.kgsyksdestek.home.ProfilFragment"
               android:label="fragment_profil" tools:layout="@layout/fragment_profil"/>
+    <fragment android:id="@+id/questionListFragment" android:name="com.gkaan.kgsyksdestek.QuestionListFragment"
+              android:label="fragment_question_list" tools:layout="@layout/fragment_question_list"/>
 </navigation>

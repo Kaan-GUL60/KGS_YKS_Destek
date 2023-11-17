@@ -3,16 +3,20 @@ package com.gkaan.kgsyksdestek
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+
 import com.gkaan.kgsyksdestek.databinding.ActivityMainHomeBinding
 import com.gkaan.kgsyksdestek.home.*
 
 class MainHomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainHomeBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replaceFragment(MainFragment())
+
+
 
         binding.bottomNavigationView2.setOnItemSelectedListener {
             when(it.itemId){
@@ -36,4 +40,5 @@ class MainHomeActivity : AppCompatActivity() {
         fragmentTransaction.replace(R.id.frame_layout,fragment)
         fragmentTransaction.commit()
     }
+
 }

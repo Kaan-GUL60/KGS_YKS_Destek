@@ -28,6 +28,10 @@ class MainFragment : Fragment() {
         val view = binding.root
         return view
 
+        binding.matematik.setOnClickListener {
+
+        }
+
 
     }
 
